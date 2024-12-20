@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .menu-category {
+            margin-bottom: 40px;
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+
+        .item-name {
+            font-size: 18px;
+        }
+
+        .item-price {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .add-to-cart-btn {
+            background-color: #28a745;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .add-to-cart-btn:hover {
+            background-color: #218838;
+        }
+
+        .cart-section {
+            margin-top: 30px;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+        }
+
+        .cart-items {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .cart-items li {
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .total {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Pizza Palace Menu</h1>
+    <p>Your favorite pizza, delivered hot and fresh!</p>
+</header>
+
+<div class="container">
+    <!-- Pizza Types Category -->
+    <div class="menu-category">
+        <h2>Pizza Types</h2>
+        <div class="menu-item">
+            <span class="item-name">Margherita</span>
+            <span class="item-price">$12.99</span>
+            <button class="add-to-cart-btn" onclick="addToCart('Margherita', 12.99)">Add to Cart</button>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Pepperoni</span>
+            <span class="item-price">$14.99</span>
+            <button class="add-to-cart-btn" onclick="addToCart('Pepperoni', 14.99)">Add to Cart</button>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">Veggie Supreme</span>
+            <span class="item-price">$16.99</span>
+            <button class="add-to-cart-btn" onclick="addToCart('Veggie Supreme', 16.99)">Add to Cart</button>
+        </div>
+        <div class="menu-item">
+            <span class="item-name">BBQ Chicken</span>
+            <span class="item-price">$17.99</span>
+            <button class="add-to-cart-btn" onclick="addToCart('BBQ Chicken', 17.99)">Add to Cart</button>
+        </div>
+    </div>
+
+    <!-- Cart Section -->
+    <div class="cart-section">
+        <h2>Your Cart</h2>
+        <ul class="cart-items" id="cartItems"></ul>
+        <p class="total" id="totalPrice">Total: $0.00</p>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Pizza Palace - All rights reserved</p>
+</footer>
+
+<script>
+    // Initialize cart
+    let cart = [];
+    let totalPrice = 0;
+
+    // Function to add items to cart
+    function addToCart(name, price) {
+        cart.push({ name, price });
+        totalPrice += price;
+        updateCart();
+    }
+
+    // Function to update cart display
+    function updateCart() {
+        const cartItemsList = document.getElementById('cartItems');
+        const totalPriceElement = document.getElementById('totalPrice');
+
+        // Clear current cart items
+        cartItemsList.innerHTML = '';
+
+        // Add each item to the cart list
+        cart.forEach(item => {
+            const li = document.createElement('li');
+            li.textContent = `${item.name} - $${item.price.toFixed(2)}`;
+            cartItemsList.appendChild(li);
+        });
+
+        // Update total price
+        totalPriceElement.textContent = `Total: $${totalPrice.toFixed(2)}`;
+    }
+</script>
+
+</body>
+</html>
