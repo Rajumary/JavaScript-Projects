@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+	<title>Madurai Villas Hotel Restaurants</title>
+
+	<style>
+	body{
+	font-family:Arial, sans-serif;
+	line-height: 1.6;
+	background-color: #482092;
+	}
+
+	header, section, footer{
+		padding: 20px;
+		margin-buttom: 20px;
+		background-color: #007BEF;
+		text-align: center;
+		
+	}
+
+	header {
+		background-color: #1ec523;
+		color: white;
+		text-align: center;
+	}
+
+	section{
+
+	padding: 30px;
+	}
+
+	footer{
+	background-color: #333;
+	color: white;
+	text-align: center;
+	padding: 10px 0;
+	}
+
+	nav a{
+		margin: 10px;
+		text-decoration: none;
+		color: #4CAF50;
+}
+img{
+	width: 200%;
+}
+
+
+/*this is mydkjhdfhdkshdkjfhdkjh*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Gallery styling */
+.gallery {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.gallery-item {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+}
+
+/* Lightbox (Modal) styling */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none; /* Initially hidden */
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.lightbox-img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 40px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+</style>
+</head>
+
+<body>
+<nav><strong>
+<a href="#home">Home</a>
+<a href="#pictures">Pictures</a>
+<a href="#contact">Contact</a>
+<a href="#video">Video</a></strong>
+</nav>
+
+<header id="home">
+<h1>Welcome to My One-Page Website</h1>
+<h2><strong>Madurai Villas Restaruant</strong></h2>
+<p>A restaurant is an establishment that prepares and serves food and drinks to customers.Meals are generally served and eaten on the premises, but many restaurants also offer take-out and food delivery services. Restaurants vary greatly in appearance and offerings, including a wide variety of cuisines and service models ranging from inexpensive fast-food restaurants and cafeterias to mid-priced family restaurants, to high-priced luxury establishments.</p></center>
+</header>
+
+<!-- Image Gallery -->
+<div class="gallery">
+    <img src="C:\Users\rajum\OneDrive\Documents\GitHub\HTML-and-CSS-projects\Projects\Images\H1.jpeg" alt="Image 1" class="gallery-item">
+    <img src="C:\Users\rajum\OneDrive\Documents\GitHub\HTML-and-CSS-projects\Projects\Images\H2.jpeg" alt="Image 2" class="gallery-item">
+    <img src="C:\Users\rajum\OneDrive\Documents\GitHub\HTML-and-CSS-projects\Projects\Images\H3.jpeg" alt="Image 3" class="gallery-item">
+  </div>
+
+  <!-- The Modal (Lightbox) -->
+  <div id="lightbox" class="lightbox">
+    <span id="close-btn" class="close-btn">&times;</span>
+    <img id="lightbox-img" class="lightbox-img" src="" alt="">
+  </div>
+
+
+
+
+<selection id="contact"><center>
+<h2> Contact Us</h2>
+	<form action="#" method="POST">
+		<label for="name">Name:</label><br>
+		<input type="text" id="name" name="name" required><br><br>
+		<label for="email">Email:</label><br>
+		<input type="email" id="eamil" name="email" required><br><br>
+		<label for="message">Message:</label></br>
+		<textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+		<input type="submit" value="Submit">
+	</form></center>
+</selection>
+
+<selection id="video"><center>
+<h2>Watch Our Video</h2>
+<iframe width="560" height="315" src="https://www.bing.com/videos/riverview/relatedvideo?&q=Tamil+Cooking+All&&mid=2D5484A129077EEE8C7F2D5484A129077EEE8C7F&&FORM=VRDGAR"></iframe>
+</center>
+</section>
+
+
+
+
+<footer>
+<p>&copy; 2024 One Page Website. All Rights Reserved.</p>
+<p>Follow us on social media:</p>
+<a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a>
+</footer>
+
+<script src="C:\Users\rajum\OneDrive\Documents\GitHub\JavaScript-Projects\One_Page_Website\JS\one_page_website.js">
+	
+</script>
+</body>
+</html>
+
+
