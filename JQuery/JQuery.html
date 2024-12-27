@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Event and Effect Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Welcome to jQuery Example</h1>
+    <button id="fadeButton">Click me to fade out</button>
+    <div id="content" style="width: 300px; height: 200px; background-color: lightblue; margin-top: 20px;">
+        This content will fade out.
+    </div>
+
+    <script>
+        // jQuery Event and Effect example:
+        $(document).ready(function() {
+            // jQuery Event: Click event on the button
+            $('#fadeButton').click(function() {
+                // jQuery Effect: Fade out the content div when the button is clicked
+                $('#content').fadeOut(1000);  // The content will fade out over 1 second (1000ms)
+            });
+        });
+    </script>
+</body>
+</html>
