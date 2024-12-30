@@ -1,0 +1,17 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+#confirmationMessage {
+    display: none;
+}
+.card img{
+    height: 300px;
+    object-fit: cover;
+}

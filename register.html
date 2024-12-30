@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register for Movie</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href=style1.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="Academy_cinema.html".html">Cinema Booking</a>
+        </div>
+    </nav>
+
+    <!-- Registration Form -->
+    <div class="container mt-5">
+        <h2>Register for Movie</h2>
+        <form id="movieRegistrationForm">
+            <div class="mb-3">
+                <label for="name" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="movie" class="form-label">Choose Movie</label>
+                <select class="form-control" id="movie" required>
+                    <option value="Movie 1">Spiderman</option>
+                    <option value="Movie 2">Moonlight</option>
+                    <option value="Movie 3">Alone</option>
+                    <!-- Add more movies here -->
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="showtime" class="form-label">Select Showtime</label>
+                <input type="datetime-local" class="form-control" id="showtime" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Register</button>
+        </form>
+
+        <div id="confirmationMessage" class="mt-4 alert alert-success d-none">
+            <strong>Success!</strong> Your registration is confirmed.
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        &copy; 2024 Cinema Booking | All Rights Reserved
+    </footer>
+
+    <!-- Bootstrap & jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script1.js"></script>
+</body>
+</html>
